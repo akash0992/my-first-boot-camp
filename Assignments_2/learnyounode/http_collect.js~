@@ -1,0 +1,33 @@
+var http = require('http'),
+    url = process.argv[2],
+    result = '';
+ 
+http.get(url, function (res) {
+    res.on('data', function (data) {
+        result += data.toString();
+    });
+    res.on('end', function (data) {
+        console.log(result.length);
+        console.log(result);
+    });
+});
+
+/*   
+
+   var http = require('http')  
+     var bl = require('bl')  
+       
+     http.get(process.argv[2], function (response) {  
+       response.pipe(bl(function (err, data) {  
+         if (err)  
+           return console.error(err)  
+         data = data.toString()  
+         console.log(data.length)  
+         console.log(data)  
+       }))    
+     })  
+   
+
+
+
+*/

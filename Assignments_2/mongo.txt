@@ -1,0 +1,558 @@
+________________________________________
+1.> Create DataBase "student_records" ?
+----------------------------------------
+> use student_records;
+switched to db student_records
+
+
+
+
+______________________________________________
+2.> create Collection "student, teacher, etc"?
+----------------------------------------------
+> db.createCollection('student');
+{ "ok" : 1 }
+> db.createCollection('teacher');
+{ "ok" : 1 }
+
+
+
+
+__________________________________________________________________________________________
+3.> Insert a Document in following format in student collection
+{
+  "address": {
+     "building": "74",
+     "street": "sector 19",
+     "zipcode": "201302"
+  },
+  "email": "a@b.com",
+  "stdname": "abc",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "A", "score": 2,"subject":"Java" },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 6, "subject":"C" },
+     { "date": { "$date": 1358985600000 }, "grade": "A", "score": 10,"subject":"C++" },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 9, "subject":"PHP" },
+     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 14, "subject":"MongoDB" }
+  ],
+  "std_id": "30075445"
+}
+----------------------------------------------------------------------------------------------
+> db.student.insert({address : { building : '74', street : 'sector 19', zipcode : '201302'}, email : 'akash@tothenew.com', stdname : 'akash', grades : [ { date : new Date(), grade : 'A', score : 2, subject : 'Java'},{ date : new Date(), grade : 'A', score : 6, subject : 'C'},{ date : new Date(), grade : 'A', score : 10, subject : 'C++'},{ date : new Date(), grade : 'A', score : 9, subject : 'PHP'},{ date : new Date(), grade : 'A', score : 14, subject : 'MongoDB'}], std_id : '30075445' });
+WriteResult({ "nInserted" : 1 })
+
+> db.student.insert({address : { building : '74', street : 'sector 20', zipcode : '201302'}, email : 'akash_aki@tothenew.com', stdname : 'akash_aki', grades : [ { date : new Date(), grade : 'A', score : 2, subject : 'Java'},{ date : new Date(), grade : 'A', score : 6, subject : 'C'},{ date : new Date(), grade : 'A', score : 10, subject : 'C++'},{ date : new Date(), grade : 'A', score : 9, subject : 'PHP'},{ date : new Date(), grade : 'A', score : 14, subject : 'MongoDB'}], std_id : '30075447' });
+WriteResult({ "nInserted" : 1 })
+
+> db.student.insert({address : { building : '74', street : 'sector 19', zipcode : '201302'}, email : 'akash_yadav@tothenew.com', stdname : 'akash_yadav', grades : [ { date : new Date(), grade : 'A', score : 2, subject : 'Java'},{ date : new Date(), grade : 'A', score : 6, subject : 'C'},{ date : new Date(), grade : 'A', score : 10, subject : 'C++'},{ date : new Date(), grade : 'A', score : 9, subject : 'PHP'},{ date : new Date(), grade : 'A', score : 14, subject : 'MongoDB'}], std_id : '30075449' });
+WriteResult({ "nInserted" : 1 })
+
+> db.student.insert({address : { building : '76', street : 'sector 19', zipcode : '201302'}, email : 'yadav_akash@tothenew.com', stdname : 'yadav_akash', grades : [ { date : new Date(), grade : 'A', score : 2, subject : 'Java'},{ date : new Date(), grade : 'A', score : 6, subject : 'C'},{ date : new Date(), grade : 'A', score : 10, subject : 'C++'},{ date : new Date(), grade : 'A', score : 9, subject : 'PHP'},{ date : new Date(), grade : 'A', score : 14, subject : 'MongoDB'}], std_id : '30075451' });
+WriteResult({ "nInserted" : 1 })
+
+> db.student.insert({address : { building : '77', street : 'sector 91', zipcode : '201302'}, email : 'ashu@tothenew.com', stdname : 'ashu', grades : [ { date : new Date(), grade : 'A', score : 2, subject : 'Java'},{ date : new Date(), grade : 'A', score : 6, subject : 'C'},{ date : new Date(), grade : 'A', score : 10, subject : 'C++'},{ date : new Date(), grade : 'A', score : 9, subject : 'PHP'},{ date : new Date(), grade : 'A', score : 14, subject : 'MongoDB'}], std_id : '30075453' });
+WriteResult({ "nInserted" : 1 })
+
+
+
+
+
+________________________________________________
+4.> Insert a document inside teacher collection
+------------------------------------------------
+
+
+> db.teacher.insert({address : { building : '41', street : 'sector 71', zipcode : '701302'}, email : 'ashu.lekhi@tothenew.com', t_name : 'ashu_lekhi', t_id : '3000001' });
+WriteResult({ "nInserted" : 1 })
+
+> db.teacher.insert({address : { building : '42', street : 'sector 72', zipcode : '701303'}, email : 'arun@tothenew.com', t_name : 'arun', t_id : '3000002' });
+WriteResult({ "nInserted" : 1 })
+
+> db.teacher.insert({address : { building : '42', street : 'sector 72', zipcode : '701304'}, email : 'priya@tothenew.com', t_name : 'priya', t_id : '3000003' });
+WriteResult({ "nInserted" : 1 })
+
+
+____________________________________________________
+5.> Write a query to show all collection, documents?
+----------------------------------------------------
+
+*****DATABASES*****
+
+
+> show dbs
+db_demo          0.078GB
+local            0.078GB
+student_records  0.078GB
+
+
+*****COLLECTIONS*****
+
+
+> show collections
+student
+system.indexes
+teacher
+
+
+*****DOCUMENTS******
+
+
+> db.student.find().pretty();
+{
+	"_id" : ObjectId("56b47247780d0b8ac6bfeea1"),
+	"address" : {
+		"building" : "74",
+		"street" : "sector 19",
+		"zipcode" : "201302"
+	},
+	"email" : "akash@tothenew.com",
+	"stdname" : "akash",
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 10,
+			"subject" : "C++"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 9,
+			"subject" : "PHP"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 14,
+			"subject" : "MongoDB"
+		}
+	],
+	"std_id" : "30075445"
+}
+{
+	"_id" : ObjectId("56b4725d780d0b8ac6bfeea2"),
+	"address" : {
+		"building" : "74",
+		"street" : "sector 20",
+		"zipcode" : "201302"
+	},
+	"email" : "akash_aki@tothenew.com",
+	"stdname" : "akash_aki",
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 10,
+			"subject" : "C++"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 9,
+			"subject" : "PHP"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 14,
+			"subject" : "MongoDB"
+		}
+	],
+	"std_id" : "30075447"
+}
+{
+	"_id" : ObjectId("56b47268780d0b8ac6bfeea3"),
+	"address" : {
+		"building" : "74",
+		"street" : "sector 19",
+		"zipcode" : "201302"
+	},
+	"email" : "akash_yadav@tothenew.com",
+	"stdname" : "akash_yadav",
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 10,
+			"subject" : "C++"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 9,
+			"subject" : "PHP"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 14,
+			"subject" : "MongoDB"
+		}
+	],
+	"std_id" : "30075449"
+}
+{
+	"_id" : ObjectId("56b4727b780d0b8ac6bfeea4"),
+	"address" : {
+		"building" : "76",
+		"street" : "sector 19",
+		"zipcode" : "201302"
+	},
+	"email" : "yadav_akash@tothenew.com",
+	"stdname" : "yadav_akash",
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 10,
+			"subject" : "C++"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 9,
+			"subject" : "PHP"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 14,
+			"subject" : "MongoDB"
+		}
+	],
+	"std_id" : "30075451"
+}
+{
+	"_id" : ObjectId("56b47288780d0b8ac6bfeea5"),
+	"address" : {
+		"building" : "77",
+		"street" : "sector 91",
+		"zipcode" : "201302"
+	},
+	"email" : "ashu@tothenew.com",
+	"stdname" : "ashu",
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 10,
+			"subject" : "C++"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 9,
+			"subject" : "PHP"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 14,
+			"subject" : "MongoDB"
+		}
+	],
+	"std_id" : "30075453"
+}
+
+
+
+
+************************************************************
+
+
+> db.teacher.find().pretty();
+{
+	"_id" : ObjectId("56b46ab5cf67bd36cad632e3"),
+	"address" : {
+		"building" : "41",
+		"street" : "sector 71",
+		"zipcode" : "701302"
+	},
+	"email" : "ashu.lekhi@tothenew.com",
+	"t_name" : "ashu_lekhi",
+	"t_id" : "3000001"
+}
+{
+	"_id" : ObjectId("56b46abecf67bd36cad632e4"),
+	"address" : {
+		"building" : "42",
+		"street" : "sector 72",
+		"zipcode" : "701303"
+	},
+	"email" : "arun@tothenew.com",
+	"t_name" : "arun",
+	"t_id" : "3000002"
+}
+{
+	"_id" : ObjectId("56b46ac5cf67bd36cad632e5"),
+	"address" : {
+		"building" : "42",
+		"street" : "sector 72",
+		"zipcode" : "701304"
+	},
+	"email" : "priya@tothenew.com",
+	"t_name" : "priya",
+	"t_id" : "3000003"
+}
+
+__________________________________________________________
+6.> Query to show only email,stdname of all the student?
+----------------------------------------------------------
+
+> db.student.find({},{_id:0,email:1,stdname:1});
+{ "email" : "akash@tothenew.com", "stdname" : "akash" }
+{ "email" : "akash_aki@tothenew.com", "stdname" : "akash_aki" }
+{ "email" : "akash_yadav@tothenew.com", "stdname" : "akash_yadav" }
+{ "email" : "yadav_akash@tothenew.com", "stdname" : "yadav_akash" }
+{ "email" : "ashu@tothenew.com", "stdname" : "ashu" }
+
+
+__________________________________________________________________________
+7.> Query to show 5 student records, those have more than 10 score in C++?
+--------------------------------------------------------------------------
+
+
+> db.student.find({grades:{'$elemMatch':{"$and":[{score:{'$gt':10},subject:{'$eq':'C++'}}]}}}).limit(5).pretty();
+
+________________________________________________________________
+8.> Query to show student those having more than 15 total score?
+-----------------------------------------------------------------
+
+> db.student.aggregate([{$unwind :"$grades"},{$group : {"_id" : "$_id",stdname:{"$first":"$stdname"}, tot : {$sum : "$grades.score"}}},{"$match":{tot:{$gt : 15}}}]);
+{ "_id" : ObjectId("56b47288780d0b8ac6bfeea5"), "stdname" : "ashu", "tot" : 41 }
+{ "_id" : ObjectId("56b4727b780d0b8ac6bfeea4"), "stdname" : "yadav_akash", "tot" : 41 }
+{ "_id" : ObjectId("56b47268780d0b8ac6bfeea3"), "stdname" : "akash_yadav", "tot" : 41 }
+{ "_id" : ObjectId("56b4725d780d0b8ac6bfeea2"), "stdname" : "akash_aki", "tot" : 41 }
+{ "_id" : ObjectId("56b47247780d0b8ac6bfeea1"), "stdname" : "akash", "tot" : 41 }
+
+
+_____________________________________________________
+9.> Query to show students Java and C grades records?
+-----------------------------------------------------
+
+> db.student.aggregate([{"$unwind":"$grades"},{"$match":{"grades.subject":{$in:['Java','C']}}},{$group:{_id:"$_id",grades:{"$push":"$grades"}}}]).pretty();
+{
+	"_id" : ObjectId("56b47288780d0b8ac6bfeea5"),
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:36.315Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		}
+	]
+}
+{
+	"_id" : ObjectId("56b4727b780d0b8ac6bfeea4"),
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:23.221Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		}
+	]
+}
+{
+	"_id" : ObjectId("56b47268780d0b8ac6bfeea3"),
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:59:04.657Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		}
+	]
+}
+{
+	"_id" : ObjectId("56b4725d780d0b8ac6bfeea2"),
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:53.202Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		}
+	]
+}
+{
+	"_id" : ObjectId("56b47247780d0b8ac6bfeea1"),
+	"grades" : [
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 2,
+			"subject" : "Java"
+		},
+		{
+			"date" : ISODate("2016-02-05T09:58:31.560Z"),
+			"grade" : "A",
+			"score" : 6,
+			"subject" : "C"
+		}
+	]
+}
+
+
+______________________________________________
+10.> how to get only _id form student collect?
+----------------------------------------------
+
+> db.student.find({},{_id:1});
+{ "_id" : ObjectId("56b47247780d0b8ac6bfeea1") }
+{ "_id" : ObjectId("56b4725d780d0b8ac6bfeea2") }
+{ "_id" : ObjectId("56b47268780d0b8ac6bfeea3") }
+{ "_id" : ObjectId("56b4727b780d0b8ac6bfeea4") }
+{ "_id" : ObjectId("56b47288780d0b8ac6bfeea5") }
+
+
+__________________________________________________________
+11.> Insert 11 records inside teacher collection together?
+-----------------------------------------------------------
+
+> db.teacher.insert([{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' },{address : { building : '77', street : 'sector 77', zipcode : '777777'}, email : 'demo@tothenew.com', t_name : 'demo', t_id : '3333333' } ]);
+BulkWriteResult({
+	"writeErrors" : [ ],
+	"writeConcernErrors" : [ ],
+	"nInserted" : 11,
+	"nUpserted" : 0,
+	"nMatched" : 0,
+	"nModified" : 0,
+	"nRemoved" : 0,
+	"upserted" : [ ]
+})
+
+
+
+___________________
+12.> NoSQL vs RDBMS
+-------------------
+
+
+
+
+____________________________________________________________
+13.> query to show student stdname whose street is sector 19
+------------------------------------------------------------
+
+
+> db.student.find({'address.street':{'$eq':'sector 19'}},{_id:0,stdname:1}).pretty();
+{ "stdname" : "akash" }
+{ "stdname" : "akash_yadav" }
+{ "stdname" : "yadav_akash" }
+
+
+__________________________________________
+14.> query to show only zipcode of student
+------------------------------------------
+
+> db.student.find({},{'address.zipcode':1,_id:0}).pretty();
+{ "address" : { "zipcode" : "201302" } }
+{ "address" : { "zipcode" : "201302" } }
+{ "address" : { "zipcode" : "201302" } }
+{ "address" : { "zipcode" : "201302" } }
+{ "address" : { "zipcode" : "201302" } }
+
+_____________________
+15.> drop collections
+---------------------
+
+> db.student.drop();
+true
+
+> db.teacher.drop();
+true
+
+
+__________________
+16.> drop database
+-------------------
+
+> db.dropDatabase();
+true
+
+

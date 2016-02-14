@@ -1,0 +1,21 @@
+mysql> create database assignment;
+
+mysql> use assignment;
+
+mysql> create table customer(id bigint not null auto_increment, name varchar(255) not null, primary key (id));
+
+
+
+
+5. select name as Vendor_Name, count(*) as Quantity from vendor join orders on vendor.id = orders.ven_id group by orders.ven_id having count(*) > 1;
+
+6. mysql> select * from vendor join orders on vendor.id=orders.ven_id join customer on orders.cust_id = customer.id;
+
+7. mysql> alter table customer add index cust_index(name);
+
+8. mysql> show index from customer;
+
+
+@ [akash]~ -> mysqldump -uroot -pakash akash_demo > Desktop/akash_assignment.sql
+
+
