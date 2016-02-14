@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q6)</title>
+
+		<script>
+
+		function check()
+		{
+			var name = document.getElementById("name").value;
+			var age = parseInt(document.getElementById("age").value);
+			if(name ==""){
+				alert("Name cannot be empty");
+				return false;
+			    }else if(isNaN(age) || age < 18){
+				alert("Enter valid age");
+				return false;
+			    }else{
+				return true;
+			    }
+    
+
+		}
+		</script>
+
+	</head>
+
+	<body>
+		<b>Q6.Allow submission of form only if the user has entered his name(not empty) and age is greater
+than or equals to 18</b>
+		<br><br><br>
+		<form action="Q6_2.html" method="post" onsubmit="return check();">		
+		<center>
+		<input type="text" id="name" name="name" placeholder="User name"/>
+		<input type="number" id="age" name="age" placeholder="Age"/>
+		</center>
+		<br>
+		<center>
+		<input type="submit" id="b1" name="b1"  value="Submit" />
+		</center>
+
+		<br>
+		</form>
+		<br><br><hr><br><br><br>
+
+		
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta character="utf-8">
+<title>div_float</title>
+<script></script>
+<style>
+
+div#d1{
+position:absolute;
+margin:auto;
+width:700px;
+height:500px;
+border:1px solid black;
+left:0;
+right:0;
+bottom:0;
+top:0;
+
+}
+
+div#d2{
+
+width:240px;
+height:240px;
+border:5px dotted red;
+text-align:center;
+float:left;
+}
+
+div#d3{
+
+width:240px;
+height:240px;
+border:5px dotted yellow;
+text-align:center;
+float:right;
+}
+
+p{
+clear:both;
+}
+
+</style>
+</head>
+
+<body>
+	<div id = 'd1'>
+		<div id='d2'></div>
+		<div id='d3'></div>
+<p> <br><hr>adhjahdhk </p>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta character="utf-8">
+<title>Q1_Q4</title>
+<script></script>
+</head>
+
+<body>
+<a href="#bottom">Bottom</a>
+<br>
+<br>
+<hr>
+HTML rocks !!!<br>
+<a href="www.gmail.com">akash is awesome</a>
+
+<strong>akash</strong><hr>
+<h1>Assignment</h1>
+<br>
+<br>
+<br>
+<hr>
+<b>Q1.Print two lists with any information you want. One list should be an ordered list, the other list should be an unordered list.</b>&nbsp;
+<br>
+<br>
+<br>
+<ol>
+	<li>AKASH</li>
+	<li>Vikas</li>
+	<li>J D</li>
+	<li>SAKSHAM</li>
+</ol>
+<br>
+<ul>
+	<li>AKASH</li>
+	<li>Vikas</li>
+	<li>J D</li>
+	<li>SAKSHAM</li>
+</ul>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br><b>Q2.Print your name to the screen with every letter being a different heading size.</b>
+<br>
+<h1>A</h1><h2>K</h2><h3>A</h3><h4>S</h4><h5>H</h5>
+<h5>Y</h5><h4>A</h4><h3>D</h3><h2>A</h2><h1>V</h1>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<b>Q3.Create some links to various search engines (google, yahoo, etc)</b>
+<br>
+<a href="https://mail.google.com">gmail</a>&nbsp;<a href="https://www.google.com">google</a>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<b>Q4.Create a page with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.</b>
+<br>
+<div id="bottom"><a href="#">top</a></div>
+<br>
+<br>
+<br>
+<b>Q5. Display five different images. Skip two lines between each image. Each image should have a title.</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q6. Display an image that has a border of size 2, a width of 200, and a height of 200.</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q7. Display an image that when clicked will link to a search engine of your choice (should be opened in a new window).</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q8. Display an image that when clicked will link to itself and will display the image in the browser by itself.</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q9. Print a paragraph with 4 - 5 sentences in green with Tahoma font.
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q10. Create lists like below using HTML and CSS.</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q11. Create a simple form using HTML and CSS.</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+<b>Q12. Create a Contact Us page.</b>
+<br>
+<br>
+
+
+
+
+
+<br>
+<br>
+<br>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q7)</title>
+
+		
+
+	</head>
+
+	<body>
+		<b>Q7.Change color of the div when mouse is moved over it and restore the color when mouse
+moves out of it.</b>
+		<br><br><br>
+		<form action="" method="" >		
+		<div id="d1" style="background:yellow" > akash yadav </div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div id="d2" id="d3" style="background:red" > akash yadav </div>
+
+		</form>
+		<br><br><hr><br><br><br>
+
+		<script>
+
+	
+			var d = document.getElementById("d1");
+			var bcolor = d.style.background;
+			d.addEventListener("mouseover",function(){d.style.background="red";},true);
+			d.addEventListener("mouseout",function(){d.style.background=bcolor;},true);
+	
+			var d2 = document.getElementById("d2");
+			var bcolor2 = d2.style.background;
+			d2.addEventListener("mouseover",function(){d2.style.background="yellow";},true);
+			d2.addEventListener("mouseout",function(){d2.style.background=bcolor2;},true);
+		
+
+
+		</script>
+	</body>
+</html>

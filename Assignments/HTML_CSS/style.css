@@ -1,0 +1,11 @@
+body{background:yellow;font-family:Georgia,sans-serif}
+
+h1#a1,h2,h3,h4,h5,h6{background:white}
+
+li{
+background-color:red;
+font-family:TIMES NEW ROMAN;
+font-size:14;
+font-weight:bold;
+font-style:italic
+}

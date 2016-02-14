@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q1)</title>
+
+		<script>
+
+			var amt;
+			var inter;
+			var year;
+			var simple;
+
+		
+		function promptUser()
+		{
+			amt = prompt("Please enter amount", "AMOUNT");
+			document.getElementById("amount").value = amt;
+			inter = prompt("Please enter interest rate", "INTEREST RATE");
+			document.getElementById("interset").value = inter;
+			year = prompt("Please enter time", "TIME(YEAR)");
+			document.getElementById("year").value = year;
+
+			simple =(amt*inter*year)/100;
+			//alert(simple);
+			document.getElementById("simple").value=simple;
+
+
+		}
+
+		
+               
+		</script>
+
+	</head>
+
+	<body>
+		<b>Q1.Prompt for amount, interest rate and no. of years and calculate simple interest.</b>
+		<br><br><br>
+		<center>
+		<input type="number" id="amount" name="amount" placeholder="Amount"/>
+		<input type="number" id="interset" name="interset" placeholder="Interest Rate"/>
+		<input type="number" id="year" name="year" placeholder="Time"/>
+		<input type="number" id="simple" name="simple" placeholder="Simple Interest"/> 
+		</center>
+
+		<br>
+		<center>
+		<input type="button" id="calc" name="calc" value="Simple interest" onClick="promptUser();"/>
+		</center>
+		<br><br><hr><br><br><br>
+
+		
+	</body>
+</html>

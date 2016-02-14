@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q1)</title>
+
+		<script></script>
+
+	</head>
+
+	<body>
+		<b>Q1.Prompt for amount, interest rate and no. of years and calculate simple interest.</b>
+		<br><br><br>
+		
+		<input type="text" id="amount" name="amount"/> 
+		
+		<br>
+
+		<ul>
+			<li>AKASH</li>
+			<li>Vikas</li>
+			<li>J D</li>
+			<li>SAKSHAM</li>
+		</ul>
+		<br><br><br><hr><br><br><br>
+
+		<b>Q2.Print your name to the screen with every letter being a different heading size.</b>
+		<br>
+
+		<h1>A</h1><h2>K</h2><h3>A</h3><h4>S</h4><h5>H</h5>
+		<h5>Y</h5><h4>A</h4><h3>D</h3><h2>A</h2><h1>V</h1>
+		<br><br><br><hr><br><br><br>
+
+		<b>Q3.Create some links to various search engines (google, yahoo, etc)</b>
+		<br>
+
+		<a href="https://mail.google.com">gmail</a>&nbsp;<a href="https://www.google.com">google</a>
+		<br><br><br><hr><br><br><br>
+
+		<b>Q4.Create a page with a link at the top of it that when clicked will jump all the way to the bottom of the page. At the bottom of the page there should be a link to jump back to the top of the page.</b>
+		<br>
+
+		<div id="bottom"><a href="#">top</a></div>
+		<br><br><hr><br>
+
+		<b>Q5. Display five different images. Skip two lines between each image. Each image should have a title.</b>
+		<br><br>
+
+		<img src="img1.jpg" title="Image 1" width="100px" height="100px"/>
+		<br><br>
+
+		<img src="img2.jpg" title="Image 2" width="100px" height="100px"/>
+		<br><br>
+
+		<img src="img3.jpg" title="Image 3" width="100px" height="100px"/>
+		<br><br>
+
+		<img src="img4.jpg" title="Image 4" width="100px" height="100px"/>
+		<br><br>
+
+		<img src="img5.jpg" title="Image 5" width="100px" height="100px"/>
+		<br><br><hr><br>
+
+		<b>Q6. Display an image that has a border of size 2, a width of 200, and a height of 200.</b>
+		<br><br>
+
+		<img src="img1.jpg" border="2" title="Image 1" width="200px" height="200px"/>
+		<br><br><hr><br>
+
+		<b>Q7. Display an image that when clicked will link to a search engine of your choice (should be opened in a new window).</b>
+		<br><br>
+
+		<a href="https://www.google.com" target="_blank"><img src="img3.jpg" title="Image 3" width="100px" height="100px"/></a>
+		<br><br><hr><br>
+
+		<b>Q8. Display an image that when clicked will link to itself and will display the image in the browser by itself.</b>
+		<br><br>
+
+		<a href="img4.jpg" target="_blank"><img src="img4.jpg" title="Image 4" width="100px" height="100px"/></a>
+		<br><br><hr><br>
+
+		<b>Q9. Print a paragraph with 4 - 5 sentences in green with Tahoma font.
+		<br><br>
+
+		<p id="new_p">
+		Akash yadav is in TO THE NEW DIGITAL.<br>
+		Akash yadav is in TO THE NEW DIGITAL.<br>
+		Akash yadav is in TO THE NEW DIGITAL.<br>
+		Akash yadav is in TO THE NEW DIGITAL.<br>
+		Akash yadav is in TO THE NEW DIGITAL.<br>
+		</p>
+		<br><br><hr><br>
+
+		<b>Q10. Create lists like below using HTML and CSS.</b>
+		<br><br>
+
+		<div id='div1'>
+			<div id='div2'>
+
+		<b>HTML list</b>
+			<ul>
+			    <li>Comedies</li>
+				<ul>
+				    <li><a href="#">As you like it</a></li>
+				    <li>All's well that ends well</li>
+				    <li>A midsummer night's dream</li>
+				    <li>Twelfth night</li>
+				</ul>
+			    <li>Tragedies</li>
+				<ul>                    
+				    <li><a href="#">Helmet</a></li>
+				    <li>Macbeth</li>
+				    <li>Romeo and juliet</li>
+				</ul>
+			    <li>Histories</li>
+				<ul>
+				    <li>Henry &#8549;<a href="#">(email)</a></li>
+				    <ul>
+				        <li>Part &#8544;</li>
+				        <li>Part &#8545;</li>
+				    </ul>
+				    <li><a href="#">Henry &#8548;</a></li>
+				    <li>Rechard &#8545;</li>
+				</ul>
+			</ul>
+			</div>
+
+			<div id='div3'>
+
+		<b>CSS list</b>
+		<BR>
+			<div style='float:left'>
+			<img src='i1.jpg' height=100 width =100 style='margin:10px' />
+		    </div>
+		    <div style='float:right'>
+			Dill and groslok chips<br/>
+			OLW, 40kg<br/>
+			21,95kr<br/>
+			13,95kr<br/>
+			jfr pris 56,75 kr/kg
+		    </div>
+		<BR><BR>    
+		    <div style='clear:both; float:left'>
+			<img src='i2.jpg' height=100 width =100 />
+		    </div>
+		    <div style='float:right'>
+			Dill and groslok chips<br/>
+			OLW, 40kg<br/>
+			21,95kr<br/>
+			13,95kr<br/>
+			jfr pris 56,75 kr/kg
+		    </div>
+		<BR><BR>
+		    <div style='clear:both; float:left'>
+			<img src='i3.jpg' height=100 width =100 />
+		    </div>
+		    <div style='float:right'>
+			Dill and groslok chips<br/>
+			OLW, 40kg<br/>
+			21,95kr<br/>
+			13,95kr<br/>
+			jfr pris 56,75 kr/kg
+		    </div>
+		<BR><BR>
+		    <div style='clear:both; float:left'>
+			<img src='i4.jpg' height=100 width =100 />
+		    </div>
+		    <div style='float:right'>
+			Dill and groslok chips<br/>
+			OLW, 40kg<br/>
+			21,95kr<br/>
+			13,95kr<br/>
+			jfr pris 56,75 kr/kg
+		    </div>
+			</div>
+		</div>
+
+		<div id="div4"></div>	
+		<br><br><hr><br>
+
+		<b>Q11. Create a simple form using HTML and CSS.</b>
+		<br><br>
+
+		<div id="div5" style="background-color:#df5020;">
+		<form action="#" method="post">
+
+		<h1 style='color:#66ff33'>Simple flat submit form</h1>
+		<p style='color:white;font-family:verdana;font-style:italic;font-weight:bold'>Lorem ipsum is simply dummy text of printing and typesetting industry.</p>
+		<img title='user image' src ='user.jpg' height=100 width=100 border-radius="50%"/><br/>
+		    <input id="name" type='text' name="name" size="35" placeholder="Name and Surname"/><br/>
+		    <input id="phone" type='text' name="phone" size="35" placeholder="Phone"/><br/>
+		    <input id="email" type='email' name="email" size="35" placeholder="Email address"/><br/>
+		    <input id="password" type='password' name="password" size="35" placeholder="........" /><br/>
+		    <input id="submit" type='submit' name="submit" size="35" style='margin:20px' value ='Register'  /><br/><br/>
+		<p style='color:white'>Copyright &copy; 2015 Simple Flat Submit Form. All right Reserved | Design The W3layouts</p>
+
+		</form>
+		</div>
+
+		<div id="div6"></div>
+		<br><hr><br>
+	
+		<b>Q12. Create a Contact Us page.</b>
+		<br><br>
+
+		<div id="div7">
+			<div id="div9">
+		<form action="#" method="post">
+
+
+		<h1>Contact Us </h1><br/>
+		<p>This is a demo of a USP Form that enables visitors to contact you
+		via email. See "Contact Form"(in General setting tab) for more options.
+		</p><br/>
+		Your Name<br/>
+		    <input id="name2" type='text' name="name" size="35" /><br/><br/>
+		Email Address<br/>
+		    <input id="email2" type='email' name="email" size="35"/><br/><br/>
+		Post URL<br/>
+		    <input id="url2" type='text' name="url" size="35"/><br/><br/>
+		Email Subject<br/>
+		    <input id="sub2" type='text' name="sub" size="35"/><br/><br/>
+		Post content<br/>
+		    <textarea id='content2' rows="4" cols="40"></textarea><br/><br/>
+		    <input id="submit2" type='submit' name="submit" size="30" style='margin:20px' value ='SUBMIT POST'  />
+		</div>		
+
+		</form>
+		</div>
+		<div id="div8"></div>
+		<br><br><hr><br>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q5)</title>
+
+		<script>
+
+		function change()
+		{
+			document.getElementById("name2").value = document.getElementById("name1").value;
+			var uname = document.getElementById("name").value;
+		}
+
+		
+               
+		</script>
+
+	</head>
+
+	<body>
+		<b>Q5.Copy text of one text field to another on change of text in first text box</b>
+		<br><br><br>
+		<form action="" method="">		
+		<center>
+		<input type="text" id="name1" name="name1"  onKeyUp="change();" />
+		<input type="text" id="name2" name="name2"  disabled/>
+		</center>
+
+		<br>
+		</form>
+		<br><br><hr><br><br><br>
+
+		
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q3)</title>
+
+		<script>
+
+			var amt;
+			var inter;
+			var year;
+			var simple;
+
+		
+		function promptUser()
+		{
+			
+			var rad= document.getElementById("rad").value;
+			var area = (3.14*rad*rad);
+			
+
+		   if(rad == ""){
+				document.getElementById('area').value = 'Please enter radius';
+		    }
+		    else{
+				document.getElementById('area').value = area;
+		    }
+
+		}
+
+		
+               
+		</script>
+
+	</head>
+
+	<body>
+		<b>Q3.Area of circle</b>
+		<br><br><br>
+		<center>
+		<input type="number" id="rad" name="rad" placeholder="Radius"/>
+		<input type="text" id="area" name="area" placeholder="Area of Circle"/> 
+		</center>
+
+		<br>
+		<center>
+		<input type="button" id="calc" name="calc" value="Check" onClick="promptUser();"/>
+		</center>
+		<br><br><hr><br><br><br>
+
+		
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta character="utf-8">
+<title>My html</title>
+<script></script>
+<style>
+
+div#d1{
+position:absolute;
+margin:auto;
+width:500px;
+height:500px;
+border:1px solid black;
+left:0;
+right:0;
+bottom:0;
+top:0;
+
+}
+
+
+
+div#d2{
+position:absolute;
+margin:auto;
+width:300px;
+height:300px;
+padding:20px;
+border:1px solid red;
+left:0;
+right:0;
+bottom:0;
+top:0;
+text-align:center;
+}
+
+
+
+</style>
+</head>
+
+<body>
+	<div id = 'd1'>
+		<div id='d2'></div>
+	</div>
+
+</body>
+
+</html>

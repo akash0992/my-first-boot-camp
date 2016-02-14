@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+ <style type="text/css">
+    div#c1{
+      border:"2px solid red";
+    }
+ </style>
+</head>
+<body>
+ 
+  <div id="d1" class="c1">outer</div>
+    <div id="d2">inner</div>
+        <div id="d3" class="c1" disabled>inner inner</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script>
+    
+    $('document').ready(function()
+    {
+      $('div').each(function(index,val)
+      {
+        alert($(this).text()+".....Text");
+        alert($(this).hasClass("c1")+".....hasClass");
+        alert($(this).is(":disabled")+"....IS");
+      }); 
+    });
+    
+  </script>
+  </body>
+  
+</html>

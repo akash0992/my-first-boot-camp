@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q2)</title>
+
+		<script>
+
+			var amt;
+			var inter;
+			var year;
+			var simple;
+
+		
+		function promptUser()
+		{
+			
+			var str= document.getElementById("str").value;
+			var isPalindrome = true;
+			var count=0;
+			for(var i = 0 ; i < str.length/2 ; i++)
+			{
+			if(str.charAt(i) != str.charAt(str.length-i-1))
+				{
+				    isPalindrome = false;
+				}
+		        }
+
+		   if(str == ""){
+				document.getElementById('pal').value = 'Please enter a string';
+		    }
+		    else if(isPalindrome == true){
+				document.getElementById('pal').value = 'String is palindrome';
+		    }
+		    else{
+				document.getElementById('pal').value = 'String is not palindrome';
+		    }
+
+		}
+
+		
+               
+		</script>
+
+	</head>
+
+	<body>
+		<b>Q2.Is palindrome string</b>
+		<br><br><br>
+		<center>
+		<input type="text" id="str" name="str" placeholder="String"/>
+		<input type="text" id="pal" name="pal" placeholder="Palindorme Or Not !!!"/> 
+		</center>
+
+		<br>
+		<center>
+		<input type="button" id="calc" name="calc" value="Check" onClick="promptUser();"/>
+		</center>
+		<br><br><hr><br><br><br>
+
+		
+	</body>
+</html>

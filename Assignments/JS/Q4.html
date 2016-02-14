@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta character="utf-8">
+
+		<title>JavaScript Assignment(Q4)</title>
+
+		<script>
+
+		function promptUser()
+		{
+			document.getElementById("name").value = prompt("Please enter your name", " Welcome User :)");
+			var uname = document.getElementById("name").value;
+			
+		   if(uname == ""){
+				document.getElementById('name').value = 'Please enter your name !!!';
+		    }
+		}
+
+		
+               
+		</script>
+
+	</head>
+
+	<body>
+		<b>Q4.On click of a button ask for the name of user and display it inside the text box</b>
+		<br><br><br>
+		<form action="" method="">		
+		<center>
+		<input type="text" id="name" name="name"  disabled/>
+		</center>
+
+		<br>
+		<center>
+		<input type="button" id="calc" name="calc" value="Prompt" onClick="promptUser();"/>
+		</center>
+		</form>
+		<br><br><hr><br><br><br>
+
+		
+	</body>
+</html>
